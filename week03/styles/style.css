@@ -1,0 +1,13 @@
+:root {
+    --primary-color: #264653;
+    --secondary-color: #2A9D8F;
+    --accent1-color: #E9C46A;
+    --accent2-color: #F4A261;
+    --heading-font: 'Monserrat', serif;
+    --text-font: 'Questrial', sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}

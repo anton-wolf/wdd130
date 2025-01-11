@@ -1,0 +1,110 @@
+:root {
+    --primary-color: #264653;
+    --secondary-color: #2A9D8F;
+    --accent1-color: #E9C46A;
+    --accent2-color: #F4A261;
+    --heading-font: 'Montserrat', serif;
+    --text-font: 'Questrial', sans-serif;
+    --black-colour: #000;
+    --white-colour: #FFF;
+    --page-max-width: 1024px;
+    --inner-padding: 10px;
+    --large-border-radius: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+
+h2 {
+    color: var(--primary-color);
+}
+
+p {
+    padding: var(--inner-padding) 0
+}
+
+body {
+    max-width: var(--page-max-width);
+    margin: auto;
+    font-family: var(--text-font);
+}
+
+main h1 {
+    color: var(--white-colour);
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero h1 {
+    position: absolute;
+    background-color: var(--secondary-color);
+    width: 80%;
+    padding: var(--inner-padding);
+    top: 50px;
+    left: 10%;
+    right: 10%;
+    font-weight: 500;
+    margin: auto;
+    text-align: center;
+    border-radius: var(--large-border-radius);
+}
+
+.hero article {
+    position: absolute;
+    bottom: 35%;
+    left: 15%;
+    right: 15%;
+    width: 70%;
+    margin: auto;
+    #background-color: var(--secondary-color);
+    border: solid medium var(--secondary-color);
+    border-radius: var(--large-border-radius);
+    backdrop-filter: blur(3px);
+
+}
+
+.hero article p {
+    color: var(--white-colour);
+    text-shadow: var(--black-colour);
+    font-size: 1.2rem;
+    padding: var(--inner-padding);
+}
+
+.hero article img {
+    float: right;
+    width: 200px;
+    object-fit: cover;
+    height: auto;
+    border-top-right-radius: calc(var(--large-border-radius) - 3px);
+    border-bottom-right-radius: calc(var(--large-border-radius) - 3px);
+    backdrop-filter: blur(10);
+}
+
+.sociallinks a {
+    text-decoration: none;
+    display: inline-block;
+    width: 40px;
+    height: auto;
+}
+
+.sociallinks img {
+    width: 100%;
+    height: auto;
+}
