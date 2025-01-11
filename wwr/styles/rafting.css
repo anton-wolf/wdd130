@@ -82,7 +82,6 @@ main h1 {
 
 .hero article p {
     color: var(--white-colour);
-    text-shadow: var(--black-colour);
     font-size: 1.2rem;
     padding: var(--inner-padding);
 }
@@ -94,7 +93,6 @@ main h1 {
     height: auto;
     border-top-right-radius: calc(var(--large-border-radius) - 3px);
     border-bottom-right-radius: calc(var(--large-border-radius) - 3px);
-    backdrop-filter: blur(10);
 }
 
 .sociallinks a {
