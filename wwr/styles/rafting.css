@@ -3,8 +3,6 @@
     --secondary-color: #2A9D8F;
     --accent1-color: #E9C46A;
     --accent2-color: #F4A261;
-    --heading-font: 'Montserrat', serif;
-    --text-font: 'Questrial', sans-serif;
     --black-colour: #000;
     --white-colour: #FFF;
     --page-max-width: 1024px;
@@ -20,7 +18,7 @@
 
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
+    font-family: 'Montserrat', sans-serif;
 }
 
 h2 {
@@ -34,7 +32,7 @@ p {
 body {
     max-width: var(--page-max-width);
     margin: auto;
-    font-family: var(--text-font);
+    font-family: 'Questrial', sans-serif;
 }
 
 main h1 {
@@ -73,7 +71,6 @@ main h1 {
     right: 15%;
     width: 70%;
     margin: auto;
-    #background-color: var(--secondary-color);
     border: solid medium var(--secondary-color);
     border-radius: var(--large-border-radius);
     backdrop-filter: blur(3px);
