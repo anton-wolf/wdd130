@@ -64,7 +64,7 @@ header nav {
 
 header nav a {
     margin: 20px;
-    font-family: var(--header-font);
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-decoration: var(--anchor-no-deco);
     color: var(--primary-color);
