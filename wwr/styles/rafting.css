@@ -74,12 +74,19 @@ main {
     max-width: var(--page-max-width);
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    gap: 60px;
 }
 
 .hero {
     position: relative;
     grid-column: span 8;
+    padding-bottom: 60px;
+}
+
+.hero.contact {
+    height: 250px;
+    background-color: var(--secondary-color);
+    display: grid;
+    padding-bottom: unset;
 }
 
 .hero img {
@@ -91,6 +98,7 @@ main {
 
 .hero h1 {
     position: absolute;
+    color: var(--white-colour);
     background-color: var(--secondary-color);
     width: 80%;
     padding: var(--inner-padding);
@@ -102,6 +110,15 @@ main {
     text-align: center;
     border-radius: var(--large-border-radius);
     max-width: var(--alt-max-width);
+}
+
+.hero.contact h1 {
+    position: relative;
+    top: unset;
+    left: unset;
+    right: unset;
+    font-size: 2em;
+    font-weight: 600;
 }
 
 .hero article {
@@ -120,10 +137,27 @@ main {
     align-items: center;
 }
 
+
+.hero.contact article {
+    bottom: unset;
+    top: 10%;
+    display: grid;
+    left: unset;
+    right: unset;
+    justify-self: center;
+}
+
 .hero article p {
     color: var(--white-colour);
     font-size: 1.2rem;
     padding: var(--inner-padding);
+    margin: auto;
+}
+
+.hero.contact article p {
+    max-width: 450px;
+    text-align: center;
+    font-size: 1.4em;
 }
 
 .hero article img {
@@ -134,13 +168,197 @@ main {
     border-radius: calc(var(--large-border-radius) + 80px);
 }
 
+
 main section {
     grid-column: 2 / span 6;
     grid-column-start: 2;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
+    padding-bottom: 60px;
 }
+
+.location {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0;
+    padding-bottom: unset;
+}
+
+.location .address {
+    grid-column: 1 / span 3;
+    color: var(--white-colour);
+    justify-self: flex-start;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.location .address h2 {
+    padding: 30px 0;
+    color: white;
+    grid-column: 2 / span 2;
+    text-align: unset;
+    font-size: 1.7em;
+}
+
+.location .address h3 {
+    padding: 10px 0;
+    color: white;
+    grid-column: 2 / span 2;
+    text-align: unset;
+}
+
+
+.location .address h3 {
+    padding-bottom: 10px;
+}
+
+.location .address .background {
+    position: absolute;
+    border-radius: 0;
+    filter: brightness(60%) contrast(100%) blur(1px);
+    object-fit: cover;
+    z-index: -1;
+    height: 100%;
+    width: auto;
+}
+
+.location .column {
+    width: auto;
+    margin: unset;
+    grid-column: 2 /span 2;
+    align-self: center;
+}
+
+
+.item {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    width: 100%;
+    justify-self: center;
+    grid-column: 2 / span 2;
+}
+
+.item div {
+    justify-self: start;
+
+    height: 30px;
+    width: 30px;
+    grid-column: span 1;
+    border-radius: 100%;
+    background-color: var(--accent1-color);
+    position: relative;
+}
+
+
+.item p {
+    grid-column: 2 / span 7;
+}
+
+.item div img {
+    filter: none;
+    z-index: 1;
+    padding: 4px;
+}
+
+.location .map {
+    grid-column: 4 / span 5;
+    width: 100%;
+    background-color: var(--white-colour);
+
+}
+
+.location .map iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+.staff {
+    grid-column: 2 / span 6;
+    grid-column-start: 2;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 60px;
+    padding-bottom: unset;
+}
+
+.staff h2 {
+    grid-column: span 2;
+}
+
+.staff h3 {
+    text-align: start;
+}
+
+.staff figure {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.staff figure img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    object-fit: cover;
+
+}
+
+.staff figure figcaption {
+    margin: 0 30px;
+}
+
+.staff figure figcaption div {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    align-items: center;
+}
+
+.staff figure figcaption p {
+    margin: 0 10px;
+    width: 170px;
+    text-align: left;
+}
+
+.staff figure figcaption img {
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    background-color: var(--accent1-color);
+}
+
+.form {
+    background-color: var(--primary-color);
+    margin-top: 60px;
+    display: grid;
+    grid-column: 1 / span 8;
+    grid-template-columns: repeat(8, 1fr);
+    padding-top: 40px;
+}
+
+
+.form .column {
+    grid-column: 2 / span 6;
+    grid-column-start: 2;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.form h2 {
+    color: var(--white-colour);
+    padding: 10px;
+}
+
+.form p {
+    grid-column: span 8;
+    justify-self: center;
+    color: var(--white-colour);
+    font-size: 1.2em;
+}
+
 
 main section h2 {
     text-align: center;
@@ -165,9 +383,14 @@ main section div {
     justify-self: center;
 }
 
-main section div div {
-    width: 200px;
-    margin: auto;
+
+footer.contact-footer {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    background-color: var(--primary-color);
+    padding: 60px var(--inner-padding) var(--inner-padding);
+    color: var(--white-colour);
+    margin: 0;
 }
 
 footer {
@@ -177,11 +400,13 @@ footer {
     margin-top: 60px;
     padding: var(--inner-padding);
     color: var(--white-colour);
+
 }
 
 footer p {
     grid-column: 4 / span 2;
     text-align: center;
+    align-self: center;
 }
 
 .sociallinks {
@@ -199,4 +424,81 @@ footer p {
 .sociallinks img {
     width: 100%;
     height: auto;
+}
+
+
+form {
+    width: 100%;
+    padding: 1rem;
+
+    display: grid;
+    grid-column: 1 / span 5;
+}
+
+.column2 {
+    /* grid-template-columns: 3fr 2fr; */
+    margin: .5rem 0;
+    width: 100%;
+}
+
+
+label {
+    text-align: left;
+    color: var(--white-colour);
+    padding-right: 1rem;
+    margin: 0 5px;
+}
+
+input, select, textarea {
+    padding: .5rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.radio-group label {
+    margin: 0 5px;
+}
+
+
+.column1 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 5px 0;
+}
+
+input[type=checkbox], input[type=radio] {
+    width: 25px;
+    height: 25px;
+}
+
+.raised-button {
+    background-color: var(--accent1-color);
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.raised-button:hover {
+    background-color: var(--accent2-color);
+}
+
+.external-link {
+    width: 25px;
+    height: 25px;
+    align-self: center;
 }
