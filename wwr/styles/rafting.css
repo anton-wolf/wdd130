@@ -205,16 +205,12 @@ main section {
 }
 
 .location .address h3 {
-    padding: 10px 0;
     color: white;
     grid-column: 2 / span 2;
     text-align: unset;
+    padding: 10px 0;
 }
 
-
-.location .address h3 {
-    padding-bottom: 10px;
-}
 
 .location .address .background {
     position: absolute;
